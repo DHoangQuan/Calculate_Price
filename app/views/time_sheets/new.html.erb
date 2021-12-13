@@ -1,0 +1,36 @@
+<h1>Create New Timesheet</h1>
+
+<%= form_with(model: @time_sheet) do |form| %>
+  
+  <% if @time_sheet.errors.any? %>
+    <div id="error_explanation">
+      <ul>
+        <% @time_sheet.errors.each do |error| %>
+          <li style="color:red"><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :working_date %>
+    <%= form.date_select :working_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :start_time %>
+    <%= form.time_select :start_time %>
+  </div>
+
+  <div class="field">
+    <%= form.label :end_time %>
+    <%= form.time_select :end_time %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+
+
+<%= link_to "Back", time_sheets_path, method: :get %>

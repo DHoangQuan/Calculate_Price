@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  working_date: 2021-12-13
+  start_time: 2021-12-13 00:55:24
+  end_time: 2021-12-13 00:55:24
+  working_fee: 1.5
+
+two:
+  working_date: 2021-12-13
+  start_time: 2021-12-13 00:55:24
+  end_time: 2021-12-13 00:55:24
+  working_fee: 1.5

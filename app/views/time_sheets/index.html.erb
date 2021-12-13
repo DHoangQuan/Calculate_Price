@@ -1,0 +1,12 @@
+<%= link_to "Create new Timesheet", new_time_sheet_path, method: :get %>
+<% if @time_sheets.count == 0%>
+<h1>There no time sheet</h1>
+<% else %>
+<p style="color: green" ><%= notice %></p>
+<h1>Timesheet Entries</h1>
+  <% @time_sheets.each do |time_sheet| %>
+    <%= time_sheet.working_date.strftime("%d %m %Y") %>: <%= time_sheet.start_time.strftime('%H:%M') %> - <%= time_sheet.end_time.strftime('%H:%M') %> $<%= time_sheet.working_fee.round(2) %>  
+    <br>
+  <% end %>
+<% end %>
+
